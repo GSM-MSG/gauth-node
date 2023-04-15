@@ -1,7 +1,7 @@
 {
   "name": "gauth-node",
   "version": "1.0.0",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "type": "module",
   "repository": "https://github.com/GSM-MSG/gauth-node.git",
   "author": "변찬우 <57276315+chanwoo00106@users.noreply.github.com>",
