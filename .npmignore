@@ -1,0 +1,11 @@
+src/**
+
+.editorconfig
+.gitignore
+.prettierrc
+.eslintrc.json
+rollup.config.js
+tsconfig.json
+babel.config.json
+jest.config.js
+yarn.lock
