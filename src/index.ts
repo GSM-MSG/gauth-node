@@ -8,10 +8,16 @@ import {
   IssueTokenRequest,
   IssueTokenResponse,
 } from '@/services/issueToken'
+import {
+  reissueToken,
+  ReIssueTokenRequest,
+  ReIssueTokenResponse,
+} from '@/services/reissueToken'
 
 const Gauth = {
   issueCode,
   issueToken,
+  reissueToken,
 }
 
 export {
@@ -21,6 +27,9 @@ export {
   issueToken,
   IssueTokenResponse,
   IssueTokenRequest,
+  reissueToken,
+  ReIssueTokenResponse,
+  ReIssueTokenRequest,
 }
 
 export default Gauth
