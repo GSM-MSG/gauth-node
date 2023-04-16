@@ -11,13 +11,15 @@ import { gauthUrl } from '@/libs/serverUrls'
  * @throws {AxiosError}
  * @returns {Response} IssueTokenResponse
  */
-const issueToken = (data: Request): Promise<Response> => {
+const issueToken = async (data: Request): Promise<Response> => {
   try {
-    return gauthApi({
+    const { data: body } = await gauthApi({
       method: 'POST',
       url: '/oauth/token',
       data,
     })
+
+    return body
   } catch (e) {
     if (!isAxiosError(e) || !e.response) throw e
 
