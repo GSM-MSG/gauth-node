@@ -1,10 +1,10 @@
 {
   "name": "@msg-team/gauth-node",
-  "version": "1.0.1",
-  "main": "dist/index.js",
+  "version": "1.0.2",
+  "main": "./dist/index.js",
   "description": "Created to support GAuth login",
   "type": "module",
-  "types": "dist/index.d.ts",
+  "types": "./dist/index.d.ts",
   "repository": "https://github.com/GSM-MSG/gauth-node.git",
   "homepage": "https://matsogeum.notion.site/GAuth-SDK-Node-js-b5c231bade194254abaf1f0610bfae84",
   "author": "변찬우 <57276315+chanwoo00106@users.noreply.github.com>",

@@ -10,7 +10,7 @@ export default {
   output: [
     {
       file: 'dist/index.js',
-      format: 'cjs',
+      format: 'esm',
     },
   ],
   plugins: [
