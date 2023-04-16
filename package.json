@@ -2,9 +2,22 @@
   "name": "gauth-node",
   "version": "1.0.0",
   "main": "dist/index.js",
+  "description": "Created to support GAuth login",
   "type": "module",
+  "types": "dist/index.d.ts",
   "repository": "https://github.com/GSM-MSG/gauth-node.git",
+  "homepage": "https://matsogeum.notion.site/GAuth-SDK-Node-js-b5c231bade194254abaf1f0610bfae84",
   "author": "변찬우 <57276315+chanwoo00106@users.noreply.github.com>",
+  "bugs": {
+    "url": "https://github.com/GSM-MSG/gauth-node/issues"
+  },
+  "keywords": [
+    "OAUTH",
+    "MSG",
+    "GAUTH",
+    "GSM",
+    "광주소프트웨어마이스터고등학교"
+  ],
   "license": "MIT",
   "scripts": {
     "build": "rollup -c",
