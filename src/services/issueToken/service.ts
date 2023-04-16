@@ -5,6 +5,12 @@ import { gauthApi } from '@/apis'
 import errorMapper from '@/libs/errorMapper'
 import { gauthUrl } from '@/libs/serverUrls'
 
+/**
+ * code를 통해 토큰을 발급받을 수 있습니다
+ * @param {Request} data - IssueTokenRequest
+ * @throws {AxiosError}
+ * @returns {Response} IssueTokenResponse
+ */
 const issueToken = (data: Request): Promise<Response> => {
   try {
     return gauthApi({

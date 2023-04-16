@@ -5,6 +5,12 @@ import { gauthApi } from '@/apis'
 import errorMapper from '@/libs/errorMapper'
 import { gauthUrl } from '@/libs/serverUrls'
 
+/**
+ * code를 발급받습니다
+ * @param {Request} data - IssueCodeRequest
+ * @throws {AxiosError}
+ * @returns {Response} - IssueCodeResponse
+ */
 const issueCode = async (data: Request): Promise<Response> => {
   try {
     const { data: body } = await gauthApi<Response>({
