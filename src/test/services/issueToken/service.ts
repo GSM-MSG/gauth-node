@@ -1,7 +1,7 @@
 import { AxiosError } from 'axios'
 import { issueToken } from '@/index'
 
-describe('issueCode test', () => {
+describe('issueToken test', () => {
   it('should throw error', async () => {
     const result = async () =>
       issueToken({

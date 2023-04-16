@@ -1,9 +1,9 @@
 import { AxiosError } from 'axios'
-import { issueCode } from '@/index'
+import { reissueToken } from '@/index'
 
-describe('issueCode test', () => {
+describe('reissueToken test', () => {
   it('should throw error', async () => {
-    const result = async () => issueCode({ email: 's210', password: '1234' })
+    const result = async () => reissueToken({ refreshToken: '뷁' })
     expect(result).rejects.toThrowError(AxiosError)
   })
 })
