@@ -3,6 +3,7 @@ import Request from './request'
 import Response from './response'
 import { gauthApi } from '@/apis'
 import errorMapper from '@/libs/errorMapper'
+import { gauthUrl } from '@/libs/serverUrls'
 
 const issueToken = (data: Request): Promise<Response> => {
   try {
@@ -12,17 +13,11 @@ const issueToken = (data: Request): Promise<Response> => {
       data,
     })
   } catch (e) {
-    if (
-      !isAxiosError(e) ||
-      !e.response ||
-      !e.response.config.url ||
-      !e.response.config.method
-    )
-      throw e
+    if (!isAxiosError(e) || !e.response) throw e
 
     e.message = errorMapper(
-      e.response.config.url,
-      e.response.config.method,
+      `${gauthUrl}/oauth/token`,
+      'POST',
       e.response.status
     )
 
