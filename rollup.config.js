@@ -18,6 +18,7 @@ export default {
     typescript({
       useTsconfigDeclarationDir: true,
       tsconfig: './tsconfig.json',
+      exclude: ['./src/test/**/*.ts'],
     }),
     commonjs(),
     nodeResolve(),

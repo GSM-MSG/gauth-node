@@ -3,28 +3,22 @@ import Request from './request'
 import Response from './response'
 import { gauthApi } from '@/apis'
 import errorMapper from '@/libs/errorMapper'
+import { gauthUrl } from '@/libs/serverUrls'
 
 const issueCode = async (data: Request): Promise<Response> => {
   try {
-    return gauthApi({
+    const { data: body } = await gauthApi<Response>({
       method: 'POST',
       url: '/oauth/code',
       data,
     })
-  } catch (e) {
-    if (
-      !isAxiosError(e) ||
-      !e.response ||
-      !e.response.config.url ||
-      !e.response.config.method
-    )
-      throw e
 
-    errorMapper(
-      e.response.config.url,
-      e.response.config.method,
-      e.response.status
-    )
+    return body
+  } catch (e) {
+    if (!isAxiosError(e) || !e.response) throw e
+
+    e.message = errorMapper(`${gauthUrl}/oauth/code`, 'POST', e.response.status)
+
     throw e
   }
 }

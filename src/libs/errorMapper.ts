@@ -8,12 +8,14 @@ const errorMapper = (
 ): string => {
   const Url = new URL(url)
 
-  const messages =
-    errorMessages[Url.hostname][Url.pathname][method.toUpperCase()]
+  try {
+    const messages =
+      errorMessages[Url.hostname][Url.pathname][method.toUpperCase()]
 
-  if (!messages) return '알 수 없는 에러'
-
-  return messages[status] ? messages[status] : messages['*']
+    return messages[status] ? messages[status] : messages['*']
+  } catch (e) {
+    return '알 수 없는 에러가 발생했습니다'
+  }
 }
 
 export default errorMapper
