@@ -13,11 +13,16 @@ import errorMapper from '@/libs/errorMapper'
  */
 const reissueToken = async (data: Request): Promise<Response> => {
   try {
-    return gauthApi({
+    const { data: body } = await gauthApi({
       method: 'PATCH',
       url: '/oauth/token',
-      data,
+      withCredentials: true,
+      headers: {
+        Authorization: `Bearer ${data.refreshToken}`,
+      },
     })
+
+    return body
   } catch (e) {
     if (!isAxiosError(e) || !e.response) throw e
 
