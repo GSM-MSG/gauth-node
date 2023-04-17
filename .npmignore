@@ -4,8 +4,8 @@ src/**
 .gitignore
 .prettierrc
 .eslintrc.json
+.eslintcache
 rollup.config.js
-tsconfig.json
 babel.config.json
 jest.config.js
 yarn.lock
