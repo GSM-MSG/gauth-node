@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
-    "strict": true,
-    "module": "ES2015",
+    "module": "ESNext",
     "target": "ES5",
-    "outDir": "./dist",
-    "declaration": true,
-    "moduleResolution": "Node",
-    "declarationDir": "./dist",
+    "moduleResolution": "node",
     "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "declaration": true,
+    "declarationDir": "./dist",
+    "outDir": "./dist",
     "baseUrl": "./src",
     "paths": {
       "@/*": ["./*"]
