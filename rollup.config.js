@@ -3,6 +3,7 @@ import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import json from '@rollup/plugin-json'
 import { babel } from '@rollup/plugin-babel'
+import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 
 export default {
   input: 'src/index.ts',
@@ -13,6 +14,7 @@ export default {
     },
   ],
   plugins: [
+    peerDepsExternal(),
     typescript({
       useTsconfigDeclarationDir: true,
       tsconfig: './tsconfig.json',
