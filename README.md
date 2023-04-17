@@ -29,7 +29,10 @@
 ```ts
 import Gauth from '@msg-team/gauth-node'
 
-const result = await Gauth.issueCode({ email: 's12345', password: '1234' })
+const result = await Gauth.issueCode({
+  email: 's12345', // s12345 or s12345@gsm.hs.kr
+  password: '1234',
+})
 
 // { code: string }
 console.log(result)
