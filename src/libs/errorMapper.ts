@@ -10,7 +10,7 @@ const errorMapper = (
 
   try {
     const messages =
-      errorMessages[Url.hostname][Url.pathname][method.toUpperCase()]
+      errorMessages[Url.origin][Url.pathname][method.toUpperCase()]
 
     return messages[status] ? messages[status] : messages['*']
   } catch (e) {

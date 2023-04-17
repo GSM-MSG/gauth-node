@@ -10,6 +10,6 @@ describe('issueToken test', () => {
         redirectUri: 'wef',
         clientSecret: 'wef',
       })
-    expect(result).rejects.toThrowError(AxiosError)
+    await expect(result).rejects.toThrowError(AxiosError)
   })
 })
