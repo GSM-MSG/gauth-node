@@ -9,10 +9,16 @@ import { gauthApi } from '@/apis'
  * @returns {Response} - IssueCodeResponse
  */
 const issueCode = async (data: Request): Promise<Response> => {
+  const prefix = '@gsm.hs.kr'
   const { data: body } = await gauthApi<Response>({
     method: 'POST',
     url: '/oauth/code',
-    data,
+    data: {
+      ...data,
+      email: data.email.includes(prefix)
+        ? data.email
+        : `${data.email}${prefix}`,
+    },
   })
 
   return body
