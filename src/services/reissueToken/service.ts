@@ -14,7 +14,7 @@ const reissueToken = async (data: Request): Promise<Response> => {
     url: '/oauth/token',
     withCredentials: true,
     headers: {
-      Authorization: `Bearer ${data.refreshToken}`,
+      refreshToken: `Bearer ${data.refreshToken}`,
     },
   })
 
