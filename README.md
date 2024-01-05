@@ -73,7 +73,7 @@ console.log(result)
 import Gauth from '@msg-team/gauth-node'
 
 const result = await Gauth.getUser({
-  accessToken: 'string',
+  Authorization: 'string',
 })
 
 // { accessToken: string, refreshToken: string }
