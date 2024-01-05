@@ -11,7 +11,7 @@ import { resourceApi } from '@/apis'
 const getUser = async (data: Request): Promise<Response> => {
   const { data: body } = await resourceApi<Response>({
     method: 'GET',
-    url: '/oauth/token',
+    url: '/user',
     withCredentials: true,
     headers: {
       Authorization: `Bearer ${data.accessToken}`,
